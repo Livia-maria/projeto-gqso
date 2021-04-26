@@ -17,7 +17,7 @@ public class TesteC {
      @Test
      public void DepositoTeste()
     {
-        assertEquals(100, conta.deposito(130));
+        assertEquals(conta.getSaldo()+130, conta.deposito(130));
     }
      
     
