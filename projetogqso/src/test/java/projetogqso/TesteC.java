@@ -20,12 +20,12 @@ public class TesteC {
      @Test
      public void DepositoTeste()
     {
-        assertEquals(conta.getSaldo()+130, conta.deposito(130));
+        assertEquals(conta.saldo()+130, conta.deposito(130));
     }
 
     @Test
     public void SaqueTeste() throws SaldoInsuficiente {
-        assertEquals(conta.getSaldo() -30, conta.saque(30));
+        assertEquals(conta.saldo() -30, conta.saque(30));
         assertThrows(Conta.SaldoInsuficiente.class, () -> conta.saque(150));
     }
      
