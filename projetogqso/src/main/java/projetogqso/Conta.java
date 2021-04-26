@@ -4,6 +4,9 @@ public class Conta {
     private double saldo =0;
 
 
+    public class SaldoInsuficiente extends Exception{
+        private static final long serialVersionUID = 1L;
+    }
 
     public double deposito(double valor) {
         
@@ -12,6 +15,18 @@ public class Conta {
         return getSaldo();
     }
 
+    
+
+    public double saque(double valor) throws SaldoInsuficiente {
+        
+        if(getSaldo() < valor) {
+            throw new SaldoInsuficiente();
+        }
+
+        setSaldo(getSaldo() - valor);
+
+        return getSaldo();
+    }
 
 public double getSaldo()
 {
