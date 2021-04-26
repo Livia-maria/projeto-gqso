@@ -5,9 +5,14 @@ public class Conta {
 
 
 
+    public double deposito(double valor) {
+        
+        setSaldo(getSaldo() + valor);
+
+        return getSaldo();
+    }
 
 
-    
 public double getSaldo()
 {
     return this.saldo;
